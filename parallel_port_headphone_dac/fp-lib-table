@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name parallel_port_headphone_dac)(type KiCad)(uri ${KIPRJMOD})(options "")(descr ""))
+)

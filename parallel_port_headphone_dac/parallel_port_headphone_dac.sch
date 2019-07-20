@@ -1,0 +1,1056 @@
+EESchema Schematic File Version 4
+LIBS:parallel_port_headphone_dac-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Parallel Port Headphone DAC"
+Date "2019-05-10"
+Rev ""
+Comp "Benedikt Freisen"
+Comment1 "(SoundJr replica)"
+Comment2 "Port-powered, with volume control"
+Comment3 ""
+Comment4 "Parallel Port Headphone DAC"
+$EndDescr
+$Comp
+L Device:CP C1
+U 1 1 5C6424B1
+P 5000 1050
+F 0 "C1" H 5118 1096 50  0000 L CNN
+F 1 "68µ" H 5118 1005 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-7343-30_AVX-N" H 5038 900 50  0001 C CNN
+F 3 "~" H 5000 1050 50  0001 C CNN
+	1    5000 1050
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R_Pack08 RN1
+U 1 1 5C6426A7
+P 2600 2950
+F 0 "RN1" V 1983 2950 50  0000 C CNN
+F 1 "8x20k" V 2074 2950 50  0000 C CNN
+F 2 "Package_SO:SOIC-16W_5.3x10.2mm_P1.27mm" V 3075 2950 50  0001 C CNN
+F 3 "~" H 2600 2950 50  0001 C CNN
+	1    2600 2950
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5C642816
+P 6900 1050
+F 0 "R4" H 6970 1096 50  0000 L CNN
+F 1 "4.7k" H 6970 1005 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6830 1050 50  0001 C CNN
+F 3 "~" H 6900 1050 50  0001 C CNN
+	1    6900 1050
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:D_x2_KCom_AAK D2
+U 1 1 5C642FB7
+P 4200 1100
+F 0 "D2" H 4200 1316 50  0000 C CNN
+F 1 "DAN202K" H 4200 1225 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SC-59" H 4200 1100 50  0001 C CNN
+F 3 "~" H 4200 1100 50  0001 C CNN
+	1    4200 1100
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:D_x2_KCom_AAK D1
+U 1 1 5C642FFB
+P 1500 1100
+F 0 "D1" H 1500 1316 50  0000 C CNN
+F 1 "DAN202K" H 1500 1225 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SC-59" H 1500 1100 50  0001 C CNN
+F 3 "~" H 1500 1100 50  0001 C CNN
+	1    1500 1100
+	1    0    0    1   
+$EndComp
+Text Label 3000 4500 1    50   ~ 0
+DAC_1xLP
+$Comp
+L power:VCC #PWR0101
+U 1 1 5C673F1C
+P 3000 900
+F 0 "#PWR0101" H 3000 750 50  0001 C CNN
+F 1 "VCC" H 3017 1073 50  0000 C CNN
+F 2 "" H 3000 900 50  0001 C CNN
+F 3 "" H 3000 900 50  0001 C CNN
+	1    3000 900 
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5C6771EA
+P 1700 5000
+F 0 "#PWR0102" H 1700 4750 50  0001 C CNN
+F 1 "GND" H 1705 4827 50  0000 C CNN
+F 2 "" H 1700 5000 50  0001 C CNN
+F 3 "" H 1700 5000 50  0001 C CNN
+	1    1700 5000
+	1    0    0    -1  
+$EndComp
+Text Label 1300 4500 0    50   ~ 0
+STATUS5
+Text Label 1300 2500 0    50   ~ 0
+D0
+Text Label 1300 2700 0    50   ~ 0
+D1
+Text Label 1300 2900 0    50   ~ 0
+D2
+Text Label 1300 3100 0    50   ~ 0
+D3
+Text Label 1300 3300 0    50   ~ 0
+D4
+Text Label 1300 3500 0    50   ~ 0
+D5
+Text Label 1300 3700 0    50   ~ 0
+D6
+Text Label 1300 3900 0    50   ~ 0
+D7
+Text Label 1300 2400 0    50   ~ 0
+CONTROL1
+Text Label 1300 2300 0    50   ~ 0
+CONTROL0
+Text Label 1300 4100 0    50   ~ 0
+STATUS6
+Text Label 1300 4300 0    50   ~ 0
+STATUS7
+Text Label 1300 4700 0    50   ~ 0
+STATUS4
+Text Label 1300 2600 0    50   ~ 0
+STATUS3
+Text Label 1300 2800 0    50   ~ 0
+CONTROL2
+Text Label 1300 3000 0    50   ~ 0
+CONTROL3
+$Comp
+L Connector:DB25_Male J1
+U 1 1 5C642437
+P 1000 3500
+F 0 "J1" H 920 2008 50  0000 C CNN
+F 1 "DB25_Male" H 920 2099 50  0000 C CNN
+F 2 "Connector_Dsub:DSUB-25_Male_EdgeMount_P2.77mm" H 1000 3500 50  0001 C CNN
+F 3 " ~" H 1000 3500 50  0001 C CNN
+	1    1000 3500
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R11
+U 1 1 5C895420
+P 3250 4500
+F 0 "R11" V 3043 4500 50  0000 C CNN
+F 1 "10k" V 3134 4500 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3180 4500 50  0001 C CNN
+F 3 "~" H 3250 4500 50  0001 C CNN
+	1    3250 4500
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:D_x2_KCom_AAK D4
+U 1 1 5C918CC5
+P 3000 1100
+F 0 "D4" H 3000 1316 50  0000 C CNN
+F 1 "DAN202K" H 3000 1225 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SC-59" H 3000 1100 50  0001 C CNN
+F 3 "~" H 3000 1100 50  0001 C CNN
+	1    3000 1100
+	-1   0    0    1   
+$EndComp
+Text Label 3300 1100 0    50   ~ 0
+CONTROL3
+Text Label 2700 1100 2    50   ~ 0
+CONTROL2
+$Comp
+L Device:R R9
+U 1 1 5C92612D
+P 4000 2900
+F 0 "R9" H 4070 2946 50  0000 L CNN
+F 1 "20k" H 4070 2855 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3930 2900 50  0001 C CNN
+F 3 "~" H 4000 2900 50  0001 C CNN
+	1    4000 2900
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5C9261D2
+P 2300 4750
+F 0 "C2" H 2415 4796 50  0000 L CNN
+F 1 "C" H 2415 4705 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 2338 4600 50  0001 C CNN
+F 3 "~" H 2300 4750 50  0001 C CNN
+	1    2300 4750
+	1    0    0    -1  
+$EndComp
+Text Label 4500 1100 0    50   ~ 0
+D1
+Wire Wire Line
+	1700 4600 1300 4600
+Wire Wire Line
+	1700 4600 1700 4400
+Wire Wire Line
+	1700 3200 1300 3200
+Connection ~ 1700 4600
+Wire Wire Line
+	1300 3400 1700 3400
+Connection ~ 1700 3400
+Wire Wire Line
+	1700 3400 1700 3200
+Wire Wire Line
+	1700 3600 1300 3600
+Connection ~ 1700 3600
+Wire Wire Line
+	1700 3600 1700 3400
+Wire Wire Line
+	1300 3800 1700 3800
+Connection ~ 1700 3800
+Wire Wire Line
+	1700 3800 1700 3600
+Wire Wire Line
+	1700 4000 1300 4000
+Connection ~ 1700 4000
+Wire Wire Line
+	1700 4000 1700 3800
+Wire Wire Line
+	1300 4200 1700 4200
+Connection ~ 1700 4200
+Wire Wire Line
+	1700 4200 1700 4000
+Wire Wire Line
+	1700 4400 1300 4400
+Connection ~ 1700 4400
+Wire Wire Line
+	1700 4400 1700 4200
+NoConn ~ 1300 4100
+NoConn ~ 1300 4300
+$Comp
+L Device:D_x2_KCom_AAK D3
+U 1 1 5C642F25
+P 6900 1600
+F 0 "D3" H 6900 1724 50  0000 C CNN
+F 1 "DAN202K" H 6900 1815 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SC-59" H 6900 1600 50  0001 C CNN
+F 3 "~" H 6900 1600 50  0001 C CNN
+	1    6900 1600
+	0    1    1    0   
+$EndComp
+Text Notes 600  6000 0    50   ~ 0
+Note:\nThis schematic uses ordinary SC-59 packages, while the relevant components actually all use reversed SC-59 packages.\nPin  numbers 1 and 2 have therefore been swapped.  The pin positions remain identical.
+$Comp
+L Device:C C3
+U 1 1 5C92621E
+P 4300 4750
+F 0 "C3" H 4415 4796 50  0000 L CNN
+F 1 "C" H 4415 4705 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4338 4600 50  0001 C CNN
+F 3 "~" H 4300 4750 50  0001 C CNN
+	1    4300 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 5C9D1EEB
+P 10300 4150
+F 0 "R8" H 10370 4196 50  0000 L CNN
+F 1 "470" H 10370 4105 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 10230 4150 50  0001 C CNN
+F 3 "~" H 10300 4150 50  0001 C CNN
+	1    10300 4150
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R R12
+U 1 1 5C895510
+P 3950 4500
+F 0 "R12" V 3743 4500 50  0000 C CNN
+F 1 "10k" V 3834 4500 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3880 4500 50  0001 C CNN
+F 3 "~" H 3950 4500 50  0001 C CNN
+	1    3950 4500
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:Q_PNP_BEC Q6
+U 1 1 5C92626C
+P 9100 4100
+F 0 "Q6" H 9291 4146 50  0000 L CNN
+F 1 "MMST2907A" H 9291 4055 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SC-59" H 9300 4200 50  0001 C CNN
+F 3 "~" H 9100 4100 50  0001 C CNN
+	1    9100 4100
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5C921D33
+P 9200 3150
+F 0 "R6" V 8993 3150 50  0000 C CNN
+F 1 "10k" V 9084 3150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 9130 3150 50  0001 C CNN
+F 3 "~" H 9200 3150 50  0001 C CNN
+	1    9200 3150
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	9200 3000 9200 2900
+$Comp
+L Connector:AudioJack3 J2
+U 1 1 5C6427AC
+P 10100 1400
+F 0 "J2" H 9850 1350 50  0000 R CNN
+F 1 "161-3402-E" H 9850 1450 50  0000 R CNN
+F 2 "parallel_port_headphone_dac:SoundJr_AudioJack" H 10100 1400 50  0001 C CNN
+F 3 "~" H 10100 1400 50  0001 C CNN
+	1    10100 1400
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5C642A73
+P 9350 1300
+F 0 "R1" V 9143 1300 50  0000 C CNN
+F 1 "100" V 9234 1300 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 9280 1300 50  0001 C CNN
+F 3 "~" H 9350 1300 50  0001 C CNN
+	1    9350 1300
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:Q_PNP_BCE Q1
+U 1 1 5C6436BA
+P 10200 3200
+F 0 "Q1" H 10391 3246 50  0000 L CNN
+F 1 "BCX51-10" H 10391 3155 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-89-3" H 10400 3300 50  0001 C CNN
+F 3 "~" H 10200 3200 50  0001 C CNN
+	1    10200 3200
+	1    0    0    1   
+$EndComp
+Text Notes 9900 1100 0    50   ~ 0
+Note:\nAudio Jack can be one of\n- Belden/Lumberg IES100-3\n- Kobiconn 161-3402-E\n- Kycon STPX-3501-3N-1\nThey all look the same.
+$Comp
+L Device:R R7
+U 1 1 5C926533
+P 9350 1600
+F 0 "R7" V 9143 1600 50  0000 C CNN
+F 1 "100" V 9234 1600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 9280 1600 50  0001 C CNN
+F 3 "~" H 9350 1600 50  0001 C CNN
+	1    9350 1600
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:Q_NPN_BEC Q5
+U 1 1 5C92CBC6
+P 9500 3500
+F 0 "Q5" H 9691 3546 50  0000 L CNN
+F 1 "MMST2222A" H 9691 3455 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SC-59" H 9700 3600 50  0001 C CNN
+F 3 "~" H 9500 3500 50  0001 C CNN
+	1    9500 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9500 1300 9900 1300
+Wire Wire Line
+	9800 1500 9900 1500
+Wire Wire Line
+	9900 1400 9700 1400
+Wire Wire Line
+	9700 1400 9700 1600
+Wire Wire Line
+	9700 1600 9500 1600
+Text Label 10850 3800 2    50   ~ 0
+AUDIO_OUT
+$Comp
+L power:VCC #PWR0103
+U 1 1 5CD164A2
+P 9200 2900
+F 0 "#PWR0103" H 9200 2750 50  0001 C CNN
+F 1 "VCC" H 9217 3073 50  0000 C CNN
+F 2 "" H 9200 2900 50  0001 C CNN
+F 3 "" H 9200 2900 50  0001 C CNN
+	1    9200 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 5CD17773
+P 2300 5000
+F 0 "#PWR0105" H 2300 4750 50  0001 C CNN
+F 1 "GND" H 2305 4827 50  0000 C CNN
+F 2 "" H 2300 5000 50  0001 C CNN
+F 3 "" H 2300 5000 50  0001 C CNN
+	1    2300 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 5CD17AD1
+P 4300 5000
+F 0 "#PWR0106" H 4300 4750 50  0001 C CNN
+F 1 "GND" H 4305 4827 50  0000 C CNN
+F 2 "" H 4300 5000 50  0001 C CNN
+F 3 "" H 4300 5000 50  0001 C CNN
+	1    4300 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 5CD17EAB
+P 9200 4400
+F 0 "#PWR0107" H 9200 4150 50  0001 C CNN
+F 1 "GND" H 9205 4227 50  0000 C CNN
+F 2 "" H 9200 4400 50  0001 C CNN
+F 3 "" H 9200 4400 50  0001 C CNN
+	1    9200 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0108
+U 1 1 5CD187E7
+P 10300 4400
+F 0 "#PWR0108" H 10300 4150 50  0001 C CNN
+F 1 "GND" H 10305 4227 50  0000 C CNN
+F 2 "" H 10300 4400 50  0001 C CNN
+F 3 "" H 10300 4400 50  0001 C CNN
+	1    10300 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0109
+U 1 1 5CD18AD5
+P 9800 1700
+F 0 "#PWR0109" H 9800 1450 50  0001 C CNN
+F 1 "GND" H 9805 1527 50  0000 C CNN
+F 2 "" H 9800 1700 50  0001 C CNN
+F 3 "" H 9800 1700 50  0001 C CNN
+	1    9800 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0110
+U 1 1 5CD68726
+P 10300 2900
+F 0 "#PWR0110" H 10300 2750 50  0001 C CNN
+F 1 "VCC" H 10317 3073 50  0000 C CNN
+F 2 "" H 10300 2900 50  0001 C CNN
+F 3 "" H 10300 2900 50  0001 C CNN
+	1    10300 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0111
+U 1 1 5CD6AAAF
+P 5000 900
+F 0 "#PWR0111" H 5000 750 50  0001 C CNN
+F 1 "VCC" H 5017 1073 50  0000 C CNN
+F 2 "" H 5000 900 50  0001 C CNN
+F 3 "" H 5000 900 50  0001 C CNN
+	1    5000 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0112
+U 1 1 5CD6B7B5
+P 5000 1200
+F 0 "#PWR0112" H 5000 950 50  0001 C CNN
+F 1 "GND" H 5005 1027 50  0000 C CNN
+F 2 "" H 5000 1200 50  0001 C CNN
+F 3 "" H 5000 1200 50  0001 C CNN
+	1    5000 1200
+	1    0    0    -1  
+$EndComp
+Text Label 6700 1600 2    50   ~ 0
+CONTROL3
+$Comp
+L power:VCC #PWR0113
+U 1 1 5CD7D797
+P 6900 900
+F 0 "#PWR0113" H 6900 750 50  0001 C CNN
+F 1 "VCC" H 6917 1073 50  0000 C CNN
+F 2 "" H 6900 900 50  0001 C CNN
+F 3 "" H 6900 900 50  0001 C CNN
+	1    6900 900 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 1200 6900 1300
+Text Label 3700 4500 1    50   ~ 0
+DAC_1.5xLP
+Text Label 8900 4100 1    50   ~ 0
+DAC_2xLP
+Wire Wire Line
+	9200 3500 9300 3500
+$Comp
+L power:VCC #PWR0114
+U 1 1 5CE3CE19
+P 1500 900
+F 0 "#PWR0114" H 1500 750 50  0001 C CNN
+F 1 "VCC" H 1517 1073 50  0000 C CNN
+F 2 "" H 1500 900 50  0001 C CNN
+F 3 "" H 1500 900 50  0001 C CNN
+	1    1500 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0115
+U 1 1 5CE3D511
+P 4200 900
+F 0 "#PWR0115" H 4200 750 50  0001 C CNN
+F 1 "VCC" H 4217 1073 50  0000 C CNN
+F 2 "" H 4200 900 50  0001 C CNN
+F 3 "" H 4200 900 50  0001 C CNN
+	1    4200 900 
+	1    0    0    -1  
+$EndComp
+Text Label 3900 1100 2    50   ~ 0
+D0
+Text Label 1800 1100 0    50   ~ 0
+CONTROL1
+Text Label 1200 1100 2    50   ~ 0
+CONTROL0
+Text Notes 800  1650 0    100  ~ 0
+Power supply
+Wire Notes Line
+	500  1700 6000 1700
+Text Notes 6300 2150 0    100  ~ 0
+Hardware detection
+NoConn ~ 1300 4700
+NoConn ~ 1300 2600
+Connection ~ 6900 1300
+Wire Wire Line
+	6900 1900 7200 1900
+Wire Notes Line
+	8000 2200 8000 500 
+Wire Notes Line
+	6000 500  6000 2200
+Text Label 2400 3350 2    50   ~ 0
+D0
+Text Label 2400 3250 2    50   ~ 0
+D1
+Text Label 2400 3150 2    50   ~ 0
+D2
+Text Label 2400 3050 2    50   ~ 0
+D3
+Text Label 2400 2950 2    50   ~ 0
+D4
+Text Label 2400 2850 2    50   ~ 0
+D5
+Text Label 2400 2750 2    50   ~ 0
+D6
+Text Label 2400 2650 2    50   ~ 0
+D7
+Text Notes 800  5450 0    100  ~ 0
+Parallel port
+Wire Notes Line
+	2000 1700 2000 5500
+Text Notes 8300 1100 0    50   ~ 0
+Note:\nMono signal is output\nas stereo with short \ncircuit protection for\nmono headphones
+Text Notes 2200 2200 0    50   ~ 0
+Note:\n8x20k can be one of\n- CTS 767163203G\n- BI Technologies 8A203\n- Bourns 4816P-1-203(LF)
+Text Notes 3400 2200 0    50   ~ 0
+Note:\n8x10k can be one of\n- CTS 767163103G\n- BI Technologies 8A103\n- Bourns 4816P-1-103(LF)
+Text Notes 2650 5000 0    50   ~ 0
+2nd order RC low-pass with taps
+Text Notes 5000 5450 0    100  ~ 0
+Volume control
+$Comp
+L Device:R_Pack08 RN2
+U 1 1 5C642636
+P 3300 2950
+F 0 "RN2" V 3825 2950 50  0000 C CNN
+F 1 "8x10k" V 3734 2950 50  0000 C CNN
+F 2 "Package_SO:SOIC-16W_5.3x10.2mm_P1.27mm" V 3775 2950 50  0001 C CNN
+F 3 "~" H 3300 2950 50  0001 C CNN
+	1    3300 2950
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5C6848FB
+P 4000 3350
+F 0 "#PWR0104" H 4000 3100 50  0001 C CNN
+F 1 "GND" H 4005 3177 50  0000 C CNN
+F 2 "" H 4000 3350 50  0001 C CNN
+F 3 "" H 4000 3350 50  0001 C CNN
+	1    4000 3350
+	1    0    0    -1  
+$EndComp
+Text Label 2800 3350 0    50   ~ 0
+D0_20k
+Text Label 2800 3250 0    50   ~ 0
+D1_20k
+Text Label 2800 3150 0    50   ~ 0
+D2_20k
+Text Label 2800 3050 0    50   ~ 0
+D3_20k
+Text Label 2800 2950 0    50   ~ 0
+D4_20k
+Text Label 2800 2850 0    50   ~ 0
+D5_20k
+Text Label 2800 2750 0    50   ~ 0
+D6_20k
+Text Label 3500 3150 0    50   ~ 0
+D1_20k
+Text Label 3500 3050 0    50   ~ 0
+D2_20k
+Text Label 3500 2950 0    50   ~ 0
+D3_20k
+Text Label 3500 2850 0    50   ~ 0
+D4_20k
+Text Label 3500 2750 0    50   ~ 0
+D5_20k
+Text Label 3500 2650 0    50   ~ 0
+D6_20k
+Wire Wire Line
+	2800 2750 3100 2750
+Wire Wire Line
+	2800 2850 3100 2850
+Wire Wire Line
+	2800 2950 3100 2950
+Wire Wire Line
+	2800 3050 3100 3050
+Wire Wire Line
+	2800 3150 3100 3150
+Wire Wire Line
+	2800 3250 3100 3250
+Text Label 4100 2350 0    50   ~ 0
+DAC_OUT
+Wire Wire Line
+	2300 4600 2300 4500
+Wire Wire Line
+	2300 5000 2300 4900
+Wire Wire Line
+	4300 4900 4300 5000
+Wire Wire Line
+	4300 4600 4300 4500
+Wire Wire Line
+	4400 4500 4300 4500
+Connection ~ 4300 4500
+Wire Wire Line
+	4100 4500 4300 4500
+Wire Wire Line
+	3800 4500 3400 4500
+Text Notes 2300 5450 0    100  ~ 0
+DAC & amp output filtering
+Wire Notes Line
+	4700 1700 4700 5500
+Text Label 4400 4500 1    50   ~ 0
+DAC_2xLP
+Wire Wire Line
+	1700 4600 1700 5000
+Connection ~ 9200 3500
+Text Label 8700 1300 2    50   ~ 0
+AUDIO_OUT
+Wire Wire Line
+	9800 1700 9800 1500
+Wire Wire Line
+	8700 1300 9000 1300
+Wire Wire Line
+	9000 1300 9000 1600
+Wire Wire Line
+	9000 1600 9200 1600
+Connection ~ 9000 1300
+Wire Wire Line
+	9000 1300 9200 1300
+Wire Notes Line
+	6000 2200 11200 2200
+Text Notes 8300 2150 0    100  ~ 0
+Audio output
+Text Notes 8900 5450 0    100  ~ 0
+Output amplifier
+Wire Notes Line
+	500  5500 11200 5500
+Wire Wire Line
+	10850 3800 10300 3800
+Connection ~ 10300 3800
+Wire Wire Line
+	10300 4300 10300 4400
+Text Notes 10450 4400 0    50   ~ 0
+load resistor
+Wire Wire Line
+	9600 3800 9600 3700
+Wire Wire Line
+	9600 3800 10300 3800
+Wire Wire Line
+	9600 3300 9600 3200
+Wire Wire Line
+	9600 3200 10000 3200
+Wire Wire Line
+	10300 3400 10300 3800
+Wire Wire Line
+	9200 3500 9200 3900
+Wire Wire Line
+	10300 3800 10300 4000
+Wire Wire Line
+	9200 3300 9200 3500
+Wire Wire Line
+	9200 4300 9200 4400
+Wire Wire Line
+	10300 3000 10300 2900
+Wire Notes Line
+	2000 4000 4700 4000
+Wire Wire Line
+	7500 3000 7500 3200
+Wire Wire Line
+	6400 3000 6400 3200
+Wire Wire Line
+	5300 3000 5300 3200
+Wire Wire Line
+	7500 3600 7500 4600
+Wire Wire Line
+	6400 3600 6400 4600
+Wire Wire Line
+	5300 3600 5300 4600
+Text Label 7900 4000 0    50   ~ 0
+DAC_2xLP
+Wire Wire Line
+	7900 4300 7900 4400
+Text Label 6800 4000 0    50   ~ 0
+DAC_1.5xLP
+Text Label 5700 4000 0    50   ~ 0
+DAC_1xLP
+Wire Wire Line
+	7900 4800 7900 5000
+Wire Wire Line
+	5700 4800 5700 5000
+Wire Wire Line
+	6800 4800 6800 5000
+$Comp
+L power:GND #PWR0116
+U 1 1 5CD18555
+P 6800 5000
+F 0 "#PWR0116" H 6800 4750 50  0001 C CNN
+F 1 "GND" H 6805 4827 50  0000 C CNN
+F 2 "" H 6800 5000 50  0001 C CNN
+F 3 "" H 6800 5000 50  0001 C CNN
+	1    6800 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0117
+U 1 1 5CD18307
+P 5700 5000
+F 0 "#PWR0117" H 5700 4750 50  0001 C CNN
+F 1 "GND" H 5705 4827 50  0000 C CNN
+F 2 "" H 5700 5000 50  0001 C CNN
+F 3 "" H 5700 5000 50  0001 C CNN
+	1    5700 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0118
+U 1 1 5CD17F65
+P 7900 5000
+F 0 "#PWR0118" H 7900 4750 50  0001 C CNN
+F 1 "GND" H 7905 4827 50  0000 C CNN
+F 2 "" H 7900 5000 50  0001 C CNN
+F 3 "" H 7900 5000 50  0001 C CNN
+	1    7900 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0119
+U 1 1 5CD1748B
+P 6400 2600
+F 0 "#PWR0119" H 6400 2450 50  0001 C CNN
+F 1 "VCC" H 6417 2773 50  0000 C CNN
+F 2 "" H 6400 2600 50  0001 C CNN
+F 3 "" H 6400 2600 50  0001 C CNN
+	1    6400 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0120
+U 1 1 5CD171B1
+P 5300 2600
+F 0 "#PWR0120" H 5300 2450 50  0001 C CNN
+F 1 "VCC" H 5317 2773 50  0000 C CNN
+F 2 "" H 5300 2600 50  0001 C CNN
+F 3 "" H 5300 2600 50  0001 C CNN
+	1    5300 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0121
+U 1 1 5CD16E61
+P 7500 2600
+F 0 "#PWR0121" H 7500 2450 50  0001 C CNN
+F 1 "VCC" H 7517 2773 50  0000 C CNN
+F 2 "" H 7500 2600 50  0001 C CNN
+F 3 "" H 7500 2600 50  0001 C CNN
+	1    7500 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 2700 5300 2600
+Wire Wire Line
+	6400 2600 6400 2700
+Wire Wire Line
+	7500 2700 7500 2600
+$Comp
+L Device:Q_PNP_BEC Q3
+U 1 1 5C643378
+P 5200 3400
+F 0 "Q3" H 5391 3446 50  0000 L CNN
+F 1 "MMST2907A" H 5391 3355 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SC-59" H 5400 3500 50  0001 C CNN
+F 3 "~" H 5200 3400 50  0001 C CNN
+	1    5200 3400
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:Q_PNP_BEC Q2
+U 1 1 5C643324
+P 6300 3400
+F 0 "Q2" H 6491 3446 50  0000 L CNN
+F 1 "MMST2907A" H 6491 3355 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SC-59" H 6500 3500 50  0001 C CNN
+F 3 "~" H 6300 3400 50  0001 C CNN
+	1    6300 3400
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:Q_PNP_BEC Q4
+U 1 1 5C643270
+P 7400 3400
+F 0 "Q4" H 7591 3446 50  0000 L CNN
+F 1 "MMST2907A" H 7591 3355 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SC-59" H 7600 3500 50  0001 C CNN
+F 3 "~" H 7400 3400 50  0001 C CNN
+	1    7400 3400
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5C6428BD
+P 6400 2850
+F 0 "R2" H 6470 2896 50  0000 L CNN
+F 1 "20k" H 6470 2805 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6330 2850 50  0001 C CNN
+F 3 "~" H 6400 2850 50  0001 C CNN
+	1    6400 2850
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5C642893
+P 5300 2850
+F 0 "R3" H 5370 2896 50  0000 L CNN
+F 1 "20k" H 5370 2805 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5230 2850 50  0001 C CNN
+F 3 "~" H 5300 2850 50  0001 C CNN
+	1    5300 2850
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5C64286B
+P 7500 2850
+F 0 "R5" H 7570 2896 50  0000 L CNN
+F 1 "20k" H 7570 2805 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7430 2850 50  0001 C CNN
+F 3 "~" H 7500 2850 50  0001 C CNN
+	1    7500 2850
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	6800 4400 6800 4300
+Wire Wire Line
+	5700 4300 5700 4400
+Wire Wire Line
+	6500 4600 6400 4600
+Wire Wire Line
+	5400 4600 5300 4600
+Wire Wire Line
+	7600 4600 7500 4600
+$Comp
+L Device:Q_NPN_BEC Q7
+U 1 1 5C92CB5E
+P 6700 4600
+F 0 "Q7" H 6891 4646 50  0000 L CNN
+F 1 "MMST2222A" H 6891 4555 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SC-59" H 6900 4700 50  0001 C CNN
+F 3 "~" H 6700 4600 50  0001 C CNN
+	1    6700 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Q_NPN_BEC Q8
+U 1 1 5C92CAF0
+P 5600 4600
+F 0 "Q8" H 5791 4646 50  0000 L CNN
+F 1 "MMST2222A" H 5791 4555 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SC-59" H 5800 4700 50  0001 C CNN
+F 3 "~" H 5600 4600 50  0001 C CNN
+	1    5600 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Q_NPN_BEC Q9
+U 1 1 5C92CA02
+P 7800 4600
+F 0 "Q9" H 7991 4646 50  0000 L CNN
+F 1 "MMST2222A" H 7991 4555 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SC-59" H 8000 4700 50  0001 C CNN
+F 3 "~" H 7800 4600 50  0001 C CNN
+	1    7800 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R13
+U 1 1 5C9260E9
+P 5700 4150
+F 0 "R13" H 5770 4196 50  0000 L CNN
+F 1 "20k" H 5770 4105 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5630 4150 50  0001 C CNN
+F 3 "~" H 5700 4150 50  0001 C CNN
+	1    5700 4150
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R R10
+U 1 1 5C92607D
+P 6800 4150
+F 0 "R10" H 6870 4196 50  0000 L CNN
+F 1 "20k" H 6870 4105 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6730 4150 50  0001 C CNN
+F 3 "~" H 6800 4150 50  0001 C CNN
+	1    6800 4150
+	1    0    0    1   
+$EndComp
+Wire Notes Line
+	8600 5500 8600 2200
+$Comp
+L power:VCC #PWR0122
+U 1 1 5CB6A7B0
+P 5300 900
+F 0 "#PWR0122" H 5300 750 50  0001 C CNN
+F 1 "VCC" H 5317 1073 50  0000 C CNN
+F 2 "" H 5300 900 50  0001 C CNN
+F 3 "" H 5300 900 50  0001 C CNN
+	1    5300 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0123
+U 1 1 5CB6A8CA
+P 5300 1200
+F 0 "#PWR0123" H 5300 950 50  0001 C CNN
+F 1 "GND" H 5305 1027 50  0000 C CNN
+F 2 "" H 5300 1200 50  0001 C CNN
+F 3 "" H 5300 1200 50  0001 C CNN
+	1    5300 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP1
+U 1 1 5CB6E83A
+P 5300 900
+F 0 "TP1" V 5254 1088 50  0000 L CNN
+F 1 "TestPoint" V 5345 1088 50  0000 L CNN
+F 2 "Connector_Wire:SolderWirePad_1x01_Drill0.8mm" H 5500 900 50  0001 C CNN
+F 3 "~" H 5500 900 50  0001 C CNN
+	1    5300 900 
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP3
+U 1 1 5CB6F0DB
+P 5300 1200
+F 0 "TP3" V 5254 1388 50  0000 L CNN
+F 1 "TestPoint" V 5345 1388 50  0000 L CNN
+F 2 "Connector_Wire:SolderWirePad_1x01_Drill0.8mm" H 5500 1200 50  0001 C CNN
+F 3 "~" H 5500 1200 50  0001 C CNN
+	1    5300 1200
+	0    1    1    0   
+$EndComp
+Connection ~ 7200 1900
+Connection ~ 7200 1300
+Wire Wire Line
+	6900 1300 7200 1300
+Wire Wire Line
+	7200 1900 7200 1300
+Text Label 7600 1300 2    50   ~ 0
+STATUS5
+Wire Wire Line
+	7200 1300 7600 1300
+$Comp
+L Connector:TestPoint TP2
+U 1 1 5CB6CD66
+P 7200 1900
+F 0 "TP2" V 7154 2088 50  0000 L CNN
+F 1 "TestPoint" V 7245 2088 50  0000 L CNN
+F 2 "Connector_Wire:SolderWirePad_1x01_Drill0.8mm" H 7400 1900 50  0001 C CNN
+F 3 "~" H 7400 1900 50  0001 C CNN
+	1    7200 1900
+	0    1    1    0   
+$EndComp
+Text Label 5000 3400 1    50   ~ 0
+CONTROL1
+Text Label 6100 3400 1    50   ~ 0
+CONTROL0
+Text Label 7200 3400 1    50   ~ 0
+CONTROL3
+$Comp
+L Device:R R14
+U 1 1 5C895566
+P 7900 4150
+F 0 "R14" V 7693 4150 50  0000 C CNN
+F 1 "10k" V 7784 4150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7830 4150 50  0001 C CNN
+F 3 "~" H 7900 4150 50  0001 C CNN
+	1    7900 4150
+	-1   0    0    -1  
+$EndComp
+Text Notes 2700 3700 0    50   ~ 0
+R-2R ladder with load resistor
+Text Notes 2300 3950 0    100  ~ 0
+Digital to analog conversion
+Wire Wire Line
+	2800 2650 2900 2650
+Wire Wire Line
+	4000 3050 4000 3350
+Text Label 3500 3250 0    50   ~ 0
+D0_20k
+Wire Wire Line
+	2900 2350 2900 2650
+Wire Wire Line
+	4000 2450 4000 2750
+Wire Wire Line
+	3600 2550 3600 2350
+Connection ~ 2900 2650
+Wire Wire Line
+	2900 2650 3100 2650
+Wire Wire Line
+	3000 2450 3000 2550
+Wire Wire Line
+	3000 2550 3100 2550
+Wire Wire Line
+	3000 2450 4000 2450
+Connection ~ 3600 2350
+Wire Wire Line
+	3600 2350 4100 2350
+Wire Wire Line
+	2900 2350 3600 2350
+Wire Wire Line
+	3600 2550 3500 2550
+Text Label 4100 2450 0    50   ~ 0
+DAC_1xLP
+Wire Wire Line
+	4100 2450 4000 2450
+Connection ~ 4000 2450
+Text Label 2300 4500 1    50   ~ 0
+DAC_OUT
+Wire Wire Line
+	3100 4500 3000 4500
+Text Notes 2450 4450 0    50   ~ 0
+connected\nvia 10k\nresistor\nabove
+Wire Notes Line
+	2400 4500 2900 4500
+$EndSCHEMATC
